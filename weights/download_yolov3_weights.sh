@@ -19,6 +19,6 @@
 # mv yolov3-tiny.conv.15 ../
 
 # new method
-python3 -c "from models import *;
+python -c "from models import *;
 attempt_download('weights/yolov3.pt');
 attempt_download('weights/yolov3-spp.pt')"
