@@ -917,8 +917,8 @@ def plot_images(images, targets, paths=None, fname='images.jpg', names=None, max
             for j, box in enumerate(boxes.T):
                 cls = int(classes[j])
                 color = color_lut[cls % len(color_lut)]
-                if cls < 0 or (names and cls >= len(names)):
-                    print('Predict out of range: %d' % cls)
+                # if cls < 0 or (names and cls >= len(names)):
+                    # print('Predict out of range: %d' % cls)
                 cls = names[cls] if names and cls > 0 and cls < len(names) else cls
                 if gt or conf[j] > 0.3:  # 0.3 conf thresh
                     label = '%s' % cls if gt else '%s %.1f' % (cls, conf[j])

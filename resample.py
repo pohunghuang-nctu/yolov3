@@ -50,7 +50,7 @@ def gen_lists(image_folder):
     print('Total %d valid images found.' % cnt)
     print('Total %d images.' % total)
     print('Total %d no label found.' % not_found)
-    train_set = random.sample(valid_set, int(len(valid_set) * 0.8))
+    train_set = random.sample(valid_set, int(len(valid_set) * 0.9))
     with open(os.path.join(base_dir, 'train.txt'), 'w') as tfile:
         tfile.write('\n'.join(train_set))
     test_set = []

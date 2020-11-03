@@ -10,9 +10,9 @@ def main():
     data_zip = sys.argv[1]
     label_folder = sys.argv[2]
     image_folder = sys.argv[3]
-    # theDir = os.path.dirname(data_zip)
-    # recursive_extract(data_zip)
-    # move_label_file(theDir, label_folder)
+    theDir = os.path.dirname(data_zip)
+    recursive_extract(data_zip)
+    move_label_file(theDir, label_folder)
     check_label(label_folder)
     gen_lists(image_folder)
 
